@@ -11,6 +11,7 @@ import AdminDashboard from "../pages/admin/AdminDashboard";
 import AdminLayout from "../components/layout/AdminLayout";
 import FacultyLayout from "../components/layout/FacultyLayout";
 import FacultyDashboard from "../pages/faculty/FacultyDashboard";
+import CreateAdmin from "../pages/admin/CreateAdmin";
 
 const routes = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ const routes = createBrowserRouter([
                 index: true,
                 // path: "dashboard",
                 element: <AdminDashboard />,
+            },
+
+            {
+                path: "create-admin",
+                element: <CreateAdmin />,
             },
             {
                 path: "create-student",
