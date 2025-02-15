@@ -1,6 +1,5 @@
-import { Layout, Menu, theme } from 'antd';
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-
+import { Layout, Menu } from 'antd';
+import { Outlet } from 'react-router-dom';
 const { Header, Content, Footer, Sider } = Layout;
 
 
@@ -64,7 +63,7 @@ export default function MainLayout() {
                             minHeight: 360,
                         }}
                     >
-                        content
+                        <Outlet />
                     </div>
                 </Content>
                 <Footer
