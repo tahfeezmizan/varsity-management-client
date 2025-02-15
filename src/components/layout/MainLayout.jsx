@@ -7,11 +7,18 @@ const items = [
     {
         key: 'Dashboard',
         label: <NavLink to={"/admin"}>Dashboard</NavLink>,
-
+    },
+    {
+        key: 'User Management',
+        label: 'User Management',
         children: [
             {
                 key: 'Create Admin',
                 label: <NavLink to={"/admin/create-admin"}>Create Admin</NavLink>,
+            },
+            {
+                key: 'Create Faculty',
+                label: <NavLink to={"/admin/create-faculty"}>Create Faculty</NavLink>,
             },
             {
                 key: 'Create Student',
