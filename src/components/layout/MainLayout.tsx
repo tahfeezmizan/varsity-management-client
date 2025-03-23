@@ -1,15 +1,30 @@
 import { Layout, Menu } from "antd";
+import { NavLink, Outlet } from "react-router-dom";
 
 const { Header, Content, Sider } = Layout;
 
 const items = [
   {
-    key: "dasodfgha",
-    label: "Dashoard",
+    key: "Dashoard",
+    label: <NavLink to={"/admin"}>Dashoard</NavLink>,
   },
   {
-    key: "dasodfghgfdgda",
-    label: "Admin",
+    key: "User Management",
+    label: "User Management",
+    children: [
+      {
+        key: "Create Admin",
+        label: <NavLink to={"/admin/create-admin"}>Create Admin</NavLink>,
+      },
+      {
+        key: "Create Faculty",
+        label: <NavLink to={"/admin/create-faculty"}>Create Faculty</NavLink>,
+      },
+      {
+        key: "Create Student",
+        label: <NavLink to={"/admin/create-student"}>Create Student</NavLink>,
+      },
+    ],
   },
   {
     key: "dasoddfsdfgha",
@@ -49,7 +64,7 @@ export default function MainLayout() {
               minHeight: 360,
             }}
           >
-            content
+            <Outlet />
           </div>
         </Content>
       </Layout>
